@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@fastify/cookie": "^9.0.4",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/passport": "^2.3.0",
+    "@fastify/session": "^10.4.0",
+    "@fastify/static": "^6.10.2",
+    "fastify": "^4.22.0",
+    "passport-local": "^1.0.0"
+  },
+  "name": "sessions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev nodemon app.js --inspect",
+    "debug": "NODE_ENV=dev node --inspect app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "pino-pretty": "^10.2.0"
+  }
+}
