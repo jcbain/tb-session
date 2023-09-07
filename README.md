@@ -25,7 +25,7 @@ npm run debug
 
 This toy application provides two mechanisms for authenticating a user one with a username and password and session handling via [@fastify/session](https://github.com/fastify/session) and the other with [@fastify/passport](https://github.com/fastify/fastify-passport) with a local strategy and session handling via @fastify/session.
 
-⚠️ **NOTE:** This app is for demonstration and exploration purposes only and passwords are stored as plain text in memory. Normal authentication flow with a username and password would include the ecrypting and storing of the encrypted password only. For sake of simplicty, I have foregone this step.
+⚠️ **NOTE:** This app is for demonstration and exploration purposes only and passwords are stored as plain text in memory. Normal authentication flow with a username and password would include the ecrypting and storing of the encrypted password only. For sake of simplicty, I have ignored this step.
 
 ### Simple Authentication with @fastify/session
 
