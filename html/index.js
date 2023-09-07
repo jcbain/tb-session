@@ -32,6 +32,7 @@ export const indexHTML = (user) => `
             <div class="login">
                 <h2>YOU DID IT!</h2>
                 <p>good work, ${user.username}!</p>
+                <p>this page should be private and you should be logged in to be able to view it.</p>
             </div>
         </body>
     </html>
@@ -44,7 +45,7 @@ export const login = (type = "passport") => {
          </head>
          <body>
              <div class="login">
-                 <h2>Login Passport</h2>
+                 <h2>Login ${type === "passport" ? "Passport" : "Simple"}</h2>
                  <form class="form" action="/auth/${type}" method="post">
                      <label for="username">username</label>
                      <input type="text" name="username"></input>

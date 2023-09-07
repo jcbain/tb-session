@@ -59,7 +59,7 @@ const auth = async function (fastify, opts) {
       redirect = "/auth/passport";
     }
 
-    if (request.session.authenticated === true) {
+    if (request.session?.authenticated === true) {
       await request.session.destroy();
     }
 
