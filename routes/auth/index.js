@@ -54,8 +54,12 @@ const auth = async function (fastify, opts) {
   fastify.get("/logout", async (request, reply) => {
     let redirect = "/auth/login";
     if (request.isAuthenticated()) {
+      // for passport you can remove the session by calling destroy
+      // or call logout and disassociate the passport id with the session. However,
+      // calling one after the other will destroy the wrong session as passport updates
+      // this value after logOut is called.
       await request.logOut();
-      await request.session.destroy();
+      // await request.session.destroy();
       redirect = "/auth/passport";
     }
 
