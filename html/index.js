@@ -37,25 +37,26 @@ export const indexHTML = (user) => `
     </html>
 `;
 
-export const passportLogin = `
-   <html>
-        <head>
-            <link rel="stylesheet" href="/assets/styles.css">
-        </head>
-        <body>
-            <div class="login">
-                <h2>Login Passport</h2>
-                <form class="form" action="/auth/passport" method="post">
-                    <label for="username">username</label>
-                    <input type="text" name="username"></input>
-                    <label for="password">password</label>
-                    <input type="text" name="password">password</input>
-                    <button type="submit">Sign In</button>
-                </form>
-                        <form class="form" action="/auth/signup">
-                    <button type="submit">Sign Up</button>
-                </form>
-            </div>
-        </body>
-    </html>
-`;
+export const login = (type = "passport") => {
+  return `<html>
+         <head>
+             <link rel="stylesheet" href="/assets/styles.css">
+         </head>
+         <body>
+             <div class="login">
+                 <h2>Login Passport</h2>
+                 <form class="form" action="/auth/${type}" method="post">
+                     <label for="username">username</label>
+                     <input type="text" name="username"></input>
+                     <label for="password">password</label>
+                     <input type="text" name="password">password</input>
+                     <button type="submit">Sign In</button>
+                 </form>
+                         <form class="form" action="/auth/signup">
+                     <button type="submit">Sign Up</button>
+                 </form>
+             </div>
+         </body>
+     </html>
+ `;
+};
